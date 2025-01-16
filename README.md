@@ -126,6 +126,9 @@
 
   # 定义项目名称及支持的语言
   project(SmallDemo LANGUAGES C CXX)
+  
+  # 设置所有库生成位置无关代码 (Position Independent Code) 对应GCC/Clang的-fPIC
+  set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
   # 设置输出目录
   # 静态库输出目录
