@@ -1,13 +1,11 @@
-set(tgt_name mainproject)
+set(tgt_name common)
 
 file(GLOB_RECURSE headers CONFIGURE_DEPENDS include/*.h include/*.hpp)
 file(GLOB_RECURSE sources CONFIGURE_DEPENDS src/*.c src/*.cpp src/*.cc src/*.cxx)
 
-add_executable(${tgt_name})
+add_library(${tgt_name} SHARED)
 
 target_sources(${tgt_name} PUBLIC ${headers})
 target_sources(${tgt_name} PRIVATE ${sources})
 
 target_include_directories(${tgt_name} PUBLIC include)
-
-target_link_libraries(${tgt_name} PRIVATE biology network common)
