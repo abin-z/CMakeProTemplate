@@ -6,6 +6,7 @@
 #include <biology/Dog.h>
 #include <network/socket.h>
 #include <mainproject/utils.hpp>
+#include <common/utils.h>
 #include <common/commfunc.h>
 
 int main(int argc, char **argv)
@@ -39,5 +40,7 @@ int main(int argc, char **argv)
   printPoint(point);
   auto param = getParam();
   printParam(param);
+  std::cout << "mysqrt(81) = " << mysqrt(81) << std::endl;
+  std::cout << "mypow(10, 3) = " << mypow(10, 3) << std::endl;
   std::cout << "========================================================\n";
 }
