@@ -7,7 +7,6 @@ extern "C"
 #endif
 
   /// 可选：如果需要显式的内存对齐控制，可以使用 #pragma pack 或 __attribute__((packed))
-  /// 如果不需要，可以去掉这些指令。
   struct point_t
   {
     double x;
