@@ -1,13 +1,13 @@
 #pragma once
 
 /*
-  推荐在CMakeList.txt中定义宏 DLL_PUBLIC_EXPORTS，而不必在源文件中手动定义它。
-  这样可以确保在编译动态库时自动设置该宏，从而在库内部导出符号.
-
-  # 定义 DLL_PUBLIC_EXPORTS 宏，表示这是一个导出库
-  target_compile_definitions(targetname PRIVATE DLL_PUBLIC_EXPORTS)
-  
-*/
+ * 推荐在CMakeList.txt中定义宏 DLL_PUBLIC_EXPORTS，而不必在源文件中手动定义它。
+ * 这样可以确保在编译动态库时自动设置该宏，从而在库内部导出符号.(win系统上需要)
+ *
+ * 定义 DLL_PUBLIC_EXPORTS 宏，表示这是一个导出库
+ * target_compile_definitions(targetname PRIVATE DLL_PUBLIC_EXPORTS)
+ * 
+ */
 
 #ifdef _WIN32
 // Windows 系统
