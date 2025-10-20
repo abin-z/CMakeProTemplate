@@ -1,3 +1,5 @@
+.cache/
+
 # 忽略所有包含 "build" 的文件夹
 *build*/
 
