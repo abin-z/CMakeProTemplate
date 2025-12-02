@@ -204,7 +204,9 @@
   
   # 指定 include 目录，让目标及其用户能够访问 include 下的头文件
   # PUBLIC 意味着 include 目录会被传播给目标的依赖者
-  target_include_directories(${tgt_name} PUBLIC include)
+  target_include_directories(${tgt_name} PUBLIC
+      $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>
+  )
   
   # 链接biology和network库, 面向目标target
   target_link_libraries(${tgt_name} PRIVATE biology network)
