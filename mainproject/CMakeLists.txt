@@ -8,6 +8,8 @@ add_executable(${tgt_name})
 target_sources(${tgt_name} PUBLIC ${headers})
 target_sources(${tgt_name} PRIVATE ${sources})
 
-target_include_directories(${tgt_name} PUBLIC include)
+target_include_directories(${tgt_name} PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>
+)
 
 target_link_libraries(${tgt_name} PRIVATE biology network common)
