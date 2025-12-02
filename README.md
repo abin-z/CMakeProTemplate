@@ -173,8 +173,9 @@
   
   # 指定 include 目录，让目标及其用户能够访问 include 下的头文件
   # PUBLIC 意味着 include 目录会被传播给目标的依赖者
-  target_include_directories(${tgt_name} PUBLIC include)
-  
+  target_include_directories(${tgt_name} PUBLIC
+      $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>
+  )
   ```
 
 - 根项目的CMakeLists.txt负责处理全局有效的设定。而子项目的CMakeLists.txt则仅考虑该子项目自身的设定，比如他的头文件目录，要链接的库等等。
