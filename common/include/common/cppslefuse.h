@@ -3,7 +3,6 @@
 
 #include <string>
 
-
 /*
  * 如果动态库只是在 C++ 项目中使用，而不需要与其他语言或 C 编译器兼容，那么不需要使用 extern "C"。
  * 你可以充分利用 C++ 的特性，例如函数重载、模板、类、标准库等，以提高代码的灵活性和可维护性。
@@ -32,6 +31,12 @@ class DLL_PUBLIC_API MyClass
  public:
   MyClass();   // 构造函数
   ~MyClass();  // 析构函数
+
+  MyClass(const MyClass &) = delete;             // 禁用拷贝构造函数
+  MyClass &operator=(const MyClass &) = delete;  // 禁用拷贝赋值运算符
+
+  MyClass(MyClass &&other) noexcept;             // 移动构造
+  MyClass &operator=(MyClass &&other) noexcept;  // 移动赋值
 
   void doSomething();  // 对外提供的接口
 
