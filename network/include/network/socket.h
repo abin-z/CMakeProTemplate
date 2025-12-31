@@ -3,12 +3,12 @@
 
 namespace network
 {
-  class Socket
-  {
-  public:
-    Socket() = default;
-    ~Socket() = default;
+class Socket
+{
+ public:
+  Socket() = default;
+  ~Socket() = default;
 
-    bool connect(const std::string &ip, int port);
-  };
-}
+  bool connect(const std::string &ip, int port);
+};
+}  // namespace network

@@ -1,14 +1,14 @@
-#include <iostream>
-#include <vector>
-#include <memory>
-
 #include <biology/Cat.h>
 #include <biology/Dog.h>
-#include <network/socket.h>
-#include <mainproject/utils.hpp>
-#include <common/utils.h>
 #include <common/commfunc.h>
 #include <common/cppslefuse.h>
+#include <common/utils.h>
+#include <network/socket.h>
+
+#include <iostream>
+#include <mainproject/utils.hpp>
+#include <memory>
+#include <vector>
 
 int main(int argc, char **argv)
 {

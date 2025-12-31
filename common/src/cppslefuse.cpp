@@ -1,5 +1,7 @@
 #include <common/cppslefuse.h>
+
 #include <iostream>
+
 
 /// Person类
 Person::Person(std::string name, int age) : name_(name), age_(age)
@@ -32,18 +34,18 @@ struct MyClass::Impl
   }
 };
 
-MyClass::MyClass() : impl_(new Impl{}) // 构造时分配实现对象
+MyClass::MyClass() : impl_(new Impl{})  // 构造时分配实现对象
 {
   std::cout << "MyClass::MyClass() called." << std::endl;
 }
 
 MyClass::~MyClass()
 {
-  delete impl_; // 析构时释放内存
+  delete impl_;  // 析构时释放内存
   std::cout << "MyClass::~MyClass() called." << std::endl;
 }
 
 void MyClass::doSomething()
 {
-  impl_->doSomethingInternal(); // 调用实现方法
+  impl_->doSomethingInternal();  // 调用实现方法
 }

@@ -1,7 +1,9 @@
 // #define DLL_PUBLIC_EXPORTS  // 在CMakeLists中已经定义了导出宏, 不需要在定义了
 
 #include <common/commfunc.h>
+
 #include <iostream>
+
 
 DLL_PUBLIC_API void say_hello()
 {
@@ -32,6 +34,6 @@ DLL_PUBLIC_API parameter_t getParam()
 
 DLL_PUBLIC_API void printParam(parameter_t arg)
 {
-  std::cout << "Parameter - Num: " << arg.num << ", Point: ("
-            << arg.point.x << ", " << arg.point.y << ", " << arg.point.z << ")" << std::endl;
+  std::cout << "Parameter - Num: " << arg.num << ", Point: (" << arg.point.x << ", " << arg.point.y << ", "
+            << arg.point.z << ")" << std::endl;
 }

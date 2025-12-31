@@ -2,8 +2,7 @@
 #include <common/dll_export.h>
 
 #ifdef __cplusplus
-extern "C"
-{
+extern "C" {
 #endif
 
 DLL_PUBLIC_API double mysqrt(double val);
