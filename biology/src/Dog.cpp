@@ -2,7 +2,6 @@
 
 #include <iostream>
 
-
 namespace biology
 {
 void Dog::makeSound() const

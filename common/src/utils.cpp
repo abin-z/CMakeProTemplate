@@ -4,7 +4,6 @@
 
 #include <cmath>
 
-
 DLL_PUBLIC_API double mysqrt(double val)
 {
   return std::sqrt(val);

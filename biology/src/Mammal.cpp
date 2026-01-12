@@ -2,7 +2,6 @@
 
 #include <iostream>
 
-
 namespace biology
 {
 void Mammal::move() const

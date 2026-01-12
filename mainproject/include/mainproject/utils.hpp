@@ -1,7 +1,6 @@
 #pragma once
 #include <cmath>
 
-
 namespace mainproject
 {
 inline double sin(double value)
