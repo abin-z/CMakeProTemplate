@@ -14,14 +14,18 @@ class DLL_PUBLIC_API Person
 {
  public:
   Person() = default;
-  Person(std::string name, int age = 18);  // 默认参数
+  explicit Person(std::string name, int age = 18);  // 默认参数
+  Person(const Person &) = default;
+  Person &operator=(const Person &) = default;
+  Person(Person &&) noexcept = default;
+  Person &operator=(Person &&) noexcept = default;
   ~Person();
 
   void say();
-  void say(const std::string str);  // 函数重载
+  void say(const std::string &str);  // 函数重载
 
  private:
-  std::string name_ = "";
+  std::string name_;
   int age_ = 0;
 };
 

@@ -8,8 +8,8 @@ class Dog : public Mammal
 {
  public:
   Dog() = default;
-  ~Dog() = default;
+  ~Dog() override = default;
   void makeSound() const override;
-  const char *getType() const override;
+  [[nodiscard]] const char *getType() const override;
 };
 }  // namespace biology

@@ -3,10 +3,10 @@
 namespace biology
 {
 /// @brief 动物类
-class Animal
+class Animal  // NOLINT(cppcoreguidelines-special-member-functions)
 {
  public:
-  virtual ~Animal() = default;
+  virtual ~Animal() = default;  // 虚析构函数
 
   // 基础方法（纯虚函数）
   virtual void makeSound() const = 0;  // 发出声音

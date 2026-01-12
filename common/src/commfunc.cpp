@@ -4,10 +4,9 @@
 
 #include <iostream>
 
-
 DLL_PUBLIC_API void say_hello()
 {
-  std::cout << "Hello from shared library!" << std::endl;
+  std::cout << "Hello from shared library!" << '\n';
 }
 
 DLL_PUBLIC_API int add(int a, int b)
@@ -17,7 +16,7 @@ DLL_PUBLIC_API int add(int a, int b)
 
 DLL_PUBLIC_API void printPoint(point_t arg)
 {
-  std::cout << "Point: (" << arg.x << ", " << arg.y << ", " << arg.z << ")" << std::endl;
+  std::cout << "Point: (" << arg.x << ", " << arg.y << ", " << arg.z << ")" << '\n';
 }
 
 DLL_PUBLIC_API point_t getPoint()
@@ -35,5 +34,5 @@ DLL_PUBLIC_API parameter_t getParam()
 DLL_PUBLIC_API void printParam(parameter_t arg)
 {
   std::cout << "Parameter - Num: " << arg.num << ", Point: (" << arg.point.x << ", " << arg.point.y << ", "
-            << arg.point.z << ")" << std::endl;
+            << arg.point.z << ")" << '\n';
 }

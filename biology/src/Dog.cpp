@@ -7,7 +7,7 @@ namespace biology
 {
 void Dog::makeSound() const
 {
-  std::cout << "Wang! Wang!" << std::endl;
+  std::cout << "Wang! Wang!" << '\n';
 }
 
 const char *Dog::getType() const

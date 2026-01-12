@@ -7,7 +7,7 @@ namespace biology
 {
 void Cat::makeSound() const
 {
-  std::cout << "Meow! Meow!" << std::endl;
+  std::cout << "Meow! Meow!" << '\n';
 }
 
 const char *Cat::getType() const

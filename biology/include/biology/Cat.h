@@ -8,8 +8,8 @@ class Cat : public Mammal
 {
  public:
   Cat() = default;
-  ~Cat() = default;
+  ~Cat() override = default;
   void makeSound() const override;
-  const char *getType() const override;
+  [[nodiscard]] const char *getType() const override;
 };
 }  // namespace biology

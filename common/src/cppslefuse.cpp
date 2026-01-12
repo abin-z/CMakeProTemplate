@@ -4,24 +4,24 @@
 #include <utility>
 
 /// Person类
-Person::Person(std::string name, int age) : name_(name), age_(age)
+Person::Person(std::string name, int age) : name_(std::move(name)), age_(age)
 {
-  std::cout << "Person::Person(std::string name, int age) called." << std::endl;
+  std::cout << "Person::Person(std::string name, int age) called." << '\n';
 }
 
 Person::~Person()
 {
-  std::cout << "Person::~Person() called." << std::endl;
+  std::cout << "Person::~Person() called." << '\n';
 }
 
 void Person::say()
 {
-  std::cout << name_ << ": hello! I`am " << std::to_string(age_) << " years old." << std::endl;
+  std::cout << name_ << ": hello! I`am " << std::to_string(age_) << " years old." << '\n';
 }
 
-void Person::say(const std::string str)
+void Person::say(const std::string &str)
 {
-  std::cout << name_ << ": " << str << std::endl;
+  std::cout << name_ << ": " << str << '\n';
 }
 
 // MyClass类, 使用了PImpl（Pointer to Implementation） 模式隐藏实现细节
@@ -33,13 +33,13 @@ struct MyClass::Impl
 
 MyClass::MyClass() : impl_(new Impl{})  // 构造时分配实现对象
 {
-  std::cout << "MyClass::MyClass() called." << std::endl;
+  std::cout << "MyClass::MyClass() called." << '\n';
 }
 
 MyClass::~MyClass()
 {
   delete impl_;  // 析构时释放内存
-  std::cout << "MyClass::~MyClass() called." << std::endl;
+  std::cout << "MyClass::~MyClass() called." << '\n';
 }
 
 MyClass::MyClass(MyClass &&other) noexcept : impl_(other.impl_)
@@ -62,5 +62,5 @@ void MyClass::doSomething()
 
 void MyClass::Impl::doSomethingInternal()
 {
-  std::cout << "Hello from MyClass::Impl!" << std::endl;
+  std::cout << "Hello from MyClass::Impl!" << '\n';
 }
