@@ -4,8 +4,7 @@
 namespace biology
 {
 /// @brief 狗类
-class Dog : public Mammal
-{
+class Dog : public Mammal {
  public:
   Dog() = default;
   ~Dog() override = default;

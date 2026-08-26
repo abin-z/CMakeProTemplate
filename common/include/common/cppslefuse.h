@@ -10,8 +10,7 @@
  */
 
 /// @brief 普通的c++类
-class DLL_PUBLIC_API Person
-{
+class DLL_PUBLIC_API Person {
  public:
   Person() = default;
   explicit Person(std::string name, int age = 18);  // 默认参数
@@ -30,8 +29,7 @@ class DLL_PUBLIC_API Person
 };
 
 /// @brief 一个普通的C++类, 使用 PImpl（Pointer to Implementation） 模式隐藏实现细节，同时确保动态库接口的 ABI 稳定性
-class DLL_PUBLIC_API MyClass
-{
+class DLL_PUBLIC_API MyClass {
  public:
   MyClass();   // 构造函数
   ~MyClass();  // 析构函数

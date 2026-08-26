@@ -3,8 +3,7 @@
 
 namespace network
 {
-class Socket
-{
+class Socket {
  public:
   Socket() = default;
   ~Socket() = default;

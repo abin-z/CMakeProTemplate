@@ -13,15 +13,13 @@ extern "C" {
 #endif
 
 /// 可选：如果需要显式的内存对齐控制，可以使用 #pragma pack 或 __attribute__((packed))
-struct point_t
-{
+struct point_t {
   double x;
   double y;
   double z;
 };
 
-struct parameter_t
-{
+struct parameter_t {
   int num;
   point_t point;
 };

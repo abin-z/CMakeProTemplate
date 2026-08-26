@@ -4,8 +4,7 @@
 namespace biology
 {
 /// @brief  哺乳动物类
-class Mammal : public Animal
-{
+class Mammal : public Animal {
  public:
   void move() const override;
 };
